@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
-project(edlib VERSION 1.2.6)
+project(edlib VERSION 1.2.6 LANGUAGES C CXX)
 
 option(EDLIB_ENABLE_INSTALL "Generate the install target" ON)
 option(EDLIB_BUILD_EXAMPLES "Build examples" ON)
@@ -72,7 +72,7 @@ target_include_directories(edlib PUBLIC
 
 # Build binaries.
 if(EDLIB_BUILD_EXAMPLES)
-  add_executable(helloWorld apps/hello-world/helloWorld.c)
+  add_executable(helloWorld apps/hello-world/helloWorld.cpp)
   target_link_libraries(helloWorld edlib)
 endif()
 
