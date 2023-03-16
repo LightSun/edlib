@@ -5,6 +5,8 @@ option(EDLIB_ENABLE_INSTALL "Generate the install target" ON)
 option(EDLIB_BUILD_EXAMPLES "Build examples" ON)
 option(EDLIB_BUILD_UTILITIES "Build utilities" ON)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+
 set(MACOSX (${CMAKE_SYSTEM_NAME} MATCHES "Darwin"))
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
